@@ -1,6 +1,6 @@
 #include "HybridMultiplySpec.hpp"
 
-using margelo::nitro::modules::HybridMultiplySpec;
+using margelo::nitro::figwallet_rsmod::HybridMultiplySpec;
 
 class HybridMultiply : public HybridMultiplySpec {
 public:

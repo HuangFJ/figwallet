@@ -1,4 +1,5 @@
-pub fn multiply(a: f64, b: f64) -> f64 {
+#[unsafe(no_mangle)]
+pub extern "C" fn rust_multiply(a: f64, b: f64) -> f64 {
     a * b
 }
 
@@ -8,7 +9,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = multiply(2.0, 2.0);
+        let result = rust_multiply(2.0, 2.0);
         assert_eq!(result, 4.0);
     }
 }

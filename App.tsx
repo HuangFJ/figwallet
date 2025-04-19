@@ -46,6 +46,9 @@ import {
   DatadogSessionSampleRateValType,
   DynamicConfigs,
 } from 'uniswap/src/features/gating/configs';
+import { multiply } from '@figwallet/rsmod';
+
+console.log('multiply', multiply(2, 3));
 
 async function setDatadogUserWithUniqueId(
   activeAddress: Maybe<Address>,

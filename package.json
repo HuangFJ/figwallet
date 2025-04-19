@@ -12,7 +12,7 @@
     "nitrogen": "nitro-codegen modules/rsmod --out ./modules/rsmod/nitrogen/generated"
   },
   "dependencies": {
-    "@figwallet/rsmod": "file:./modules/rsmod",
+    "@figwallet/rsmod": "workspace:^",
     "@react-native-masked-view/masked-view": "0.3.2",
     "@react-native/metro-config": "0.76.6",
     "@shopify/react-native-skia": "1.7.2",
@@ -83,5 +83,8 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "workspaces": [
+    "modules/rsmod"
+  ]
 }

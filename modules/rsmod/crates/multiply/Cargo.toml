@@ -1,0 +1,14 @@
+[package]
+name = "multiply"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = [
+    "staticlib", # Generates a C-compatible static library.
+    # Optional: Also compile as a Rust library to enable Cargo features
+    # like `tests/`, doc tests, and `examples/`
+    "lib",
+]
+
+[dependencies]
