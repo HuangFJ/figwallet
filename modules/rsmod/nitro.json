@@ -1,0 +1,16 @@
+{
+  "cxxNamespace": ["figwallet_rsmod"],
+  "ios": {
+    "iosModuleName": "Rsmod"
+  },
+  "android": {
+    "androidNamespace": ["figwallet","rsmod"],
+    "androidCxxLibName": "figwallet_rsmod"
+  },
+  "autolinking": {
+    "Multiply": {
+      "cpp": "HybridMultiply"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
