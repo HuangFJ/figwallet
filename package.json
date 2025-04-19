@@ -8,16 +8,17 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "storybook-generate": "sb-rn-get-stories"
+    "storybook-generate": "sb-rn-get-stories",
+    "nitrogen": "nitro-codegen modules/rsmod --out ./modules/rsmod/nitrogen/generated"
   },
   "dependencies": {
+    "@figwallet/rsmod": "file:./modules/rsmod",
     "@react-native-masked-view/masked-view": "0.3.2",
     "@react-native/metro-config": "0.76.6",
     "@shopify/react-native-skia": "1.7.2",
     "@sparkfabrik/react-native-idfa-aaid": "1.2.0",
     "expo": "52.0.9",
     "expo-localization": "16.0.0",
-    "@figwallet/modrs": "workspace:^",
     "react": "18.3.1",
     "react-i18next": "14.1.0",
     "react-native": "0.76.9",
@@ -28,6 +29,7 @@
     "react-native-image-colors": "1.5.2",
     "react-native-localize": "3.4.1",
     "react-native-mmkv": "3.2.0",
+    "react-native-nitro-modules": "*",
     "react-native-reanimated": "3.16.7",
     "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "4.1.0",
@@ -70,18 +72,16 @@
     "eslint": "^8.19.0",
     "expo-modules-core": "2.1.4",
     "jest": "^29.6.3",
+    "nitro-codegen": "*",
     "prettier": "2.8.8",
     "react-dom": "18.3.1",
     "react-test-renderer": "18.3.1",
     "reactotron-react-native": "5.1.10",
     "reactotron-react-native-mmkv": "0.2.8",
     "reactotron-redux": "3.1.10",
-    "typescript": "5.0.4"
+    "typescript": "5.3.3"
   },
   "engines": {
     "node": ">=18"
-  },
-  "workspaces": [
-    "rust/modrs"
-  ]
+  }
 }
