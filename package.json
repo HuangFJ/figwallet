@@ -17,6 +17,7 @@
     "@sparkfabrik/react-native-idfa-aaid": "1.2.0",
     "expo": "52.0.9",
     "expo-localization": "16.0.0",
+    "@figwallet/modrs": "workspace:^",
     "react": "18.3.1",
     "react-i18next": "14.1.0",
     "react-native": "0.76.9",
@@ -79,5 +80,8 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "workspaces": [
+    "rust/modrs"
+  ]
 }
