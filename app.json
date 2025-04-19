@@ -1,4 +1,14 @@
 {
   "name": "figwallet",
-  "displayName": "figwallet"
+  "displayName": "figwallet",
+  "expo": {
+    "ios": {
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "plugins": [
+      "expo-localization"
+    ]
+  }
 }

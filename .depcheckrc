@@ -1,0 +1,4 @@
+ignores: [
+    'expo-localization',
+    'expo-modules-core',
+]
