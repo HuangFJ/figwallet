@@ -1,7 +1,7 @@
 # Convenience shorthands.
 [alias]
-build-ios = ["build", "--target", "x86_64-apple-ios"]
-build-android = ["build", "--target", "x86_64-linux-android"]
+build-ios = "build --target x86_64-apple-ios"
+build-android = "build --target x86_64-linux-android"
 
 # Linker configuration settings.
 [target.x86_64-apple-ios]
