@@ -1,12 +1,15 @@
-TARGET_FILE := .done
+MAKEDONE := .makedone
 CODE_WORKSPACE := figwallet.code-workspace
 
-ifeq ($(wildcard $(TARGET_FILE)),)
+ifeq ($(wildcard $(MAKEDONE)),)
 all: interface/apps interface/apps/figwallet
-		$(info "Done! You can now open workspace from figwallet.code-workspace.")
+	@echo "{\"folders\": [{\"path\": \"interface/apps/figwallet\"}]}" > $(CODE_WORKSPACE)
+	touch $(MAKEDONE)
+	touch interface/apps/figwallet/$(MAKEDONE)
+	$(info "Done! You can now open workspace from $(CODE_WORKSPACE).")
 else
 all:
-		$(info "Already done setup!")
+	$(info "Already done setup!")
 endif
 
 interface/apps:
@@ -14,5 +17,3 @@ interface/apps:
 
 interface/apps/figwallet:
 	git clone https://github.com/HuangFJ/figwallet interface/apps/figwallet
-	$(file > $(CODE_WORKSPACE),{"folders": [{"path": "interface/apps/figwallet"}]})
-  touch $(TARGET_FILE)
