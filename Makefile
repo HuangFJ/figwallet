@@ -1,4 +1,5 @@
 TARGET_FILE := .done
+CODE_WORKSPACE := figwallet.code-workspace
 
 ifeq ($(wildcard $(TARGET_FILE)),)
 all: interface/apps interface/apps/figwallet
@@ -13,4 +14,5 @@ interface/apps:
 
 interface/apps/figwallet:
 	git clone https://github.com/HuangFJ/figwallet interface/apps/figwallet
-	touch $(TARGET_FILE)
+	$(file > $(CODE_WORKSPACE),{"folders": [{"path": "interface/apps/figwallet"}]})
+  touch $(TARGET_FILE)
