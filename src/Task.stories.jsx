@@ -1,5 +1,4 @@
-
-import { Task } from './Task';
+import { Task } from './Task'
 
 export default {
   title: 'Task',
@@ -8,7 +7,7 @@ export default {
     onPinTask: { action: 'onPinTask' },
     onArchiveTask: { action: 'onArchiveTask' },
   },
-};
+}
 
 export const Default = {
   args: {
@@ -18,12 +17,12 @@ export const Default = {
       state: 'TASK_INBOX',
     },
   },
-};
+}
 
 export const Pinned = {
   args: { task: { ...Default.args.task, state: 'TASK_PINNED' } },
-};
+}
 
 export const Archived = {
   args: { task: { ...Default.args.task, state: 'TASK_ARCHIVED' } },
-};
+}

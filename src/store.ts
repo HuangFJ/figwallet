@@ -1,11 +1,11 @@
 import type { Middleware, PreloadedState } from '@reduxjs/toolkit'
+import { combineReducers } from '@reduxjs/toolkit'
 import { MMKV } from 'react-native-mmkv'
 import { Storage, persistReducer, persistStore } from 'redux-persist'
 import { fiatOnRampAggregatorApi } from 'uniswap/src/features/fiatOnRamp/api'
 import { isNonJestDev } from 'utilities/src/environment/constants'
 import { createDatadogReduxEnhancer } from 'utilities/src/logger/datadog/Datadog'
 import { createStore } from 'wallet/src/state'
-import { combineReducers } from '@reduxjs/toolkit'
 import { walletPersistedStateList, walletReducers } from 'wallet/src/state/walletReducer'
 
 const storage = new MMKV()
